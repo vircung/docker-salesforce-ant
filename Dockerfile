@@ -1,4 +1,4 @@
-FROM openjdk:15-alpine
+FROM alpine:3.18
 
 LABEL maintainer="Luis Miguel Vicente Fuentes"
 
