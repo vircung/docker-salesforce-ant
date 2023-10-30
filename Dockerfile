@@ -3,7 +3,7 @@ FROM alpine:3.18
 LABEL maintainer="Luis Miguel Vicente Fuentes"
 
 # Apache Ant
-ENV ANT_VERSION 1.10.8
+ENV ANT_VERSION 1.10.14
 ENV ANT_HOME /opt/ant
 
 WORKDIR /tmp
