@@ -10,6 +10,15 @@ ENV SF_ANT_VERSION=$DOCKER_TAG
 ENV ANT_VERSION 1.10.14
 ENV ANT_HOME /opt/ant
 
+RUN  apk update \
+  && apk upgrade \
+  && apk add ca-certificates \
+  && update-ca-certificates \
+  && apk add --update coreutils && rm -rf /var/cache/apk/*   \
+  && apk add --update openjdk11 tzdata curl unzip bash \
+  && apk add --no-cache nss \
+  && rm -rf /var/cache/apk/*
+
 WORKDIR /tmp
 # Apache Ant installation
 RUN wget https://dlcdn.apache.org/ant/binaries/apache-ant-${ANT_VERSION}-bin.tar.gz \
