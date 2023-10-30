@@ -1,6 +1,10 @@
 FROM alpine:3.18
 
 LABEL maintainer="Luis Miguel Vicente Fuentes"
+ARG DOCKER_TAG=58.0
+
+# Salesforce Ant migration tool
+ENV SF_ANT_VERSION=$DOCKER_TAG
 
 # Apache Ant
 ENV ANT_VERSION 1.10.14
